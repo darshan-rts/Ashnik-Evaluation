@@ -9,7 +9,7 @@ spec:
     http:
       paths:
       - path: /ashnik
-        pathType: prefix
+        pathType: Prefix
         backend:
           service:
             name: hello-world
