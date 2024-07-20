@@ -1,0 +1,21 @@
+- name: Install Nginx Ingress Controller
+  hosts: localhost
+  tasks:
+  - name: Create a k8s namespace
+    k8s:
+      name: ingress-controller 
+      api_version: v1
+      kind: Namespace
+      state: present
+
+  - name: Download Kubernetes ingress manifest to the cluster.
+    get_url:
+      url: https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v3.6.1/deploy/crds.yaml 
+      dest: ~/Ashnik-Evaluation/crds.yaml
+      mode: '0664'
+
+  - name: Apply ingress manifest to the cluster.
+    k8s:
+      state: present
+      namespace: ingress-controller
+      src: ~/Ashnik-Evaluation/crds.yaml
