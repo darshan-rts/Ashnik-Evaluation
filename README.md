@@ -43,6 +43,6 @@
 
  ##### 2. Run following command to install nginx controller in ingress-controller namespace.
 
-      ansible-playbook install-ingresscontroller.yaml
+      ansible-playbook install-ingress-playbook.yaml
       
  
