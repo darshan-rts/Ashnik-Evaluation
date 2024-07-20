@@ -9,9 +9,9 @@ metadata:
 spec:
   ports:
   - name: hello-world
-    port: 80
+    port: 4751
     protocol: TCP
-    targetPort: 80
+    targetPort: 4751
   selector:
     app: hello-world
   type: ClusterIP
@@ -34,7 +34,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: hello-world
+      - image: testcontainers/helloworld
         name: hello-world
         ports:
-        - containerPort: 80
+        - containerPort: 4751
