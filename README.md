@@ -17,7 +17,7 @@
 
 ##### 1. Install helm in macos.
 
-      brew install helm chart.
+      brew install helm
    
 ##### 2. Install Nginx Controller version 1.3.1 in ingress-controller namespace using following command. This helm command with install nginx-ingress controller as daemon set with "nginx-ingress" as a release name
 
