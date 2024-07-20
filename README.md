@@ -43,6 +43,12 @@
 
  ##### 2. Run following command to install nginx controller in ingress-controller namespace.
 
-      ansible-playbook install-ingress-playbook.yaml
+      ansible-playbook ingress-controller-playbook.yaml
       
+##### 3.  Run following command to deploy hello world app.
+
+      ansible-playbook helloworld-playbook.yaml
+      
+
+
  
