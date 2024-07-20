@@ -35,4 +35,14 @@
 
       kubectl apply -f hello-world.yaml
 
+ ### Ansible Automation
+
+ ##### 1. Validate whether k8s module is present.
+ 
+       ansible-galaxy collection list | grep kubernetes  
+
+ ##### 2. Run following command to install nginx controller in ingress-controller namespace.
+
+      ansible-playbook install-ingresscontroller.yaml
+      
  
