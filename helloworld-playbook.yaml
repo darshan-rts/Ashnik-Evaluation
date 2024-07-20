@@ -1,0 +1,17 @@
+- name: Install helloworld app.
+  hosts: localhost
+  tasks:
+  - name: Create a namespace
+    k8s:
+      name: ashnik-evaluation 
+      api_version: v1
+      kind: Namespace
+      state: present
+
+  - name: Install nginx Ingress
+    k8s:
+      src: ~/Ashnik-Evaluation/ingress.yaml
+  
+  - name: Deploy hello world app.
+    k8s:
+      src: ~/Ashnik-Evaluation/hello-world.yaml 
