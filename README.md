@@ -1,7 +1,7 @@
 ## Kubernetes Cluster Setup
 1. To setup K8s cluster using minikube in mac os follow the following steps.
-   
-    brew install minikube
+
+#      brew install minikube
    
 3. If minikube is already installed in your mac please follow the following Steps.
    
