@@ -2,12 +2,17 @@
 1. To setup K8s cluster using minikube in mac os follow the following steps.
    
     brew install minikube
-2. If minikube is already installed in your mac please follow the following Steps.
+   
+3. If minikube is already installed in your mac please follow the following Steps.
    
     brew unlink minikube
    
     brew link --overwrite minikube
-
+   
+5. Start MiniKube Cluster.
+   
+   minikube start
+   
 ## Nginx Ingress Setup:  
 
 1. Install helm in macos.
