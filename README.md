@@ -1,4 +1,4 @@
-## Kubernetes Cluster Setup
+### Kubernetes Cluster Setup
 
 ##### 1. To setup K8s cluster using minikube in mac os follow the following steps.
       
@@ -13,7 +13,7 @@
 
       minikube start
    
-## Nginx Ingress Setup:  
+### Nginx Ingress Setup:  
 
 ##### 1. Install helm in macos.
 
@@ -27,7 +27,12 @@
 ##### 3. Install ingress.yaml in ashnik namespace using the following command.
    
       kubectl create namespace ashnik
-      kubectl apply -n ashnik-test -f ingress.yaml 
+      kubectl apply -n -f ingress.yaml 
+      
+### Sample Application Deployment
 
+##### Run hello-world manifest file to install application.
+
+      kubectl apply -f hello-world.yaml
 
  
