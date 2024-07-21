@@ -18,6 +18,6 @@
 
 #### Install Nginx Controller mentioned in step 2 of Ansible Automation.
 
-##### To generate certificate and enable it for nginx ingress run the following command 
+##### To generate certificate and enable it for nginx ingress, run the following command 
 
     ansible-playbook enable-ssl-ingress-playbook.yaml
