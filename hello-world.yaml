@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-world
   name: hello-world
-  namespace: ashnik-test
+  namespace: ashnik-evaluation 
 spec:
   ports:
   - name: hello-world
@@ -22,7 +22,7 @@ metadata:
   labels:
     app: hello-world
   name: hello-world
-  namespace: ashnik-test
+  namespace: ashnik-evaluation
 spec:
   replicas: 1
   selector:
