@@ -11,11 +11,11 @@
   - name: Download Kubernetes ingress manifest to the cluster.
     get_url:
       url: https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v3.6.1/deploy/crds.yaml 
-      dest: ~/Ashnik-Evaluation/crds.yaml
+      dest: ingress-crds/crds.yaml
       mode: '0664'
 
   - name: Apply ingress manifest to the cluster.
     k8s:
       state: present
       namespace: ingress-controller
-      src: ~/Ashnik-Evaluation/crds.yaml
+      src: ingress-crds/crds.yaml
