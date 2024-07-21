@@ -27,7 +27,7 @@
 ##### 3. Install ingress.yaml in ashnik namespace using the following command.
    
       kubectl create namespace ashnik-evaluation
-      kubectl apply -n -f ingress.yaml 
+      kubectl apply -n ashnik-evaluation -f ingress.yaml 
       
 ### Sample Application Deployment
 
