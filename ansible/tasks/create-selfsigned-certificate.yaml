@@ -1,0 +1,17 @@
+- name: Generate an OpenSSL private key with the default values (4096 bits, RSA)
+  openssl_privatekey:
+    path: ~/Ashnik-Evaluation/crts/ashnik.evaluation.com.pem
+
+- name: Generate an OpenSSL Certificate Signing Request
+  openssl_csr:
+    path: ~/Ashnik-Evaluation/crts/ashnik.evaluation.com.csr
+    privatekey_path: ~/Ashnik-Evaluation/crts/ashnik.evaluation.com.pem
+    common_name: ashnik.evaluation.com
+
+- name: Generate a Self Signed OpenSSL certificate
+  openssl_certificate:
+    path: ~/Ashnik-Evaluation/crts/ashnik.evaluation.com.crt
+    selfsigned_not_after: "+3650d"
+    privatekey_path: ~/Ashnik-Evaluation/crts/ashnik.evaluation.com.pem
+    csr_path: ~/Ashnik-Evaluation/crts/ashnik.evaluation.com.csr
+    provider: selfsigned
