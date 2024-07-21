@@ -1,8 +1,8 @@
 - name: Generate Certificate and secret.
   hosts: localhost
   vars:
-    crt: "{{ lookup('file', 'crts/ashnik.evaluation.com.crt') }}"
-    key: "{{ lookup('file', 'crts/ashnik.evaluation.com.pem') }}"
+    crt: "{{ lookup('file', '../crts/ashnik.evaluation.com.crt') }}"
+    key: "{{ lookup('file', '../crts/ashnik.evaluation.com.pem') }}"
   tasks:
     - include_tasks: "tasks/create-selfsigned-certificate.yaml"
     - include_tasks: "tasks/create-k8s-secret.yaml"
