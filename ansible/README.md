@@ -14,11 +14,15 @@
       
 ### Security with TLS/SSL
 
-##### 1. Create selfsigned certificate using following Playbook.
+#### Prerquisite.
 
-    ansible-playbook openssl-playbook.yaml
+#### Install Nginx Controller mentioned in step 2 of Ansible Automation.
 
-##### 2. Create secret
+
+##### To generate certificate and enable it for nginx ingress run the following command 
+
+    ansible-playbook enable-ssl-ingress-playbook.yaml
+
      
 
 
