@@ -1,1 +1,25 @@
-
+- name: Configura tls for ingress Controller.
+  k8s:
+    state: present
+    definition:
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: ashnik-ingress
+        namespace: ashnik-evaluation
+      spec:
+        tls:
+        - hosts:
+          - ashnik.evaluation.com
+          secretName: ashnik-secret
+        rules:
+        - host: ashnik.evaluation.com
+          http:
+            paths:
+            - path: /ashnik
+              pathType: Prefix
+              backend:
+                service:
+                  name: hello-world
+                  port:
+                    number: 4751
