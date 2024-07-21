@@ -34,21 +34,3 @@
 ##### Run hello-world manifest file to install application.
 
       kubectl apply -f hello-world.yaml
-
- ### Ansible Automation
-
- ##### 1. Validate whether k8s module is present.
- 
-       ansible-galaxy collection list | grep kubernetes  
-
- ##### 2. Run following command to install nginx controller in ingress-controller namespace.
-
-      ansible-playbook ingress-controller-playbook.yaml
-      
-##### 3.  Run following command to deploy hello world app.
-
-      ansible-playbook helloworld-playbook.yaml
-      
-
-
- 
